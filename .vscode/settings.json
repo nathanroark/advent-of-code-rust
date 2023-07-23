@@ -1,0 +1,9 @@
+{
+  "rust-analyzer.linkedProjects": [
+    ".\\y2015\\d01\\Cargo.toml",
+    ".\\y2015\\d02\\Cargo.toml",
+    ".\\y2021\\d01\\Cargo.toml",
+    ".\\y2021\\d02\\Cargo.toml",
+    ".\\y2021\\d03\\Cargo.toml"
+  ]
+}
