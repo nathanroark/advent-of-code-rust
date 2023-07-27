@@ -1,3 +1,9 @@
+// =====================================================================
+// Advent of Code 2015 - Day 01 - Perfectly Spherical Houses in a Vacuum
+// http://adventofcode.com/day/3
+// Author: Nathan Roark
+// =====================================================================
+
 fn part_1() {
     let input = std::fs::read_to_string("./input.txt").unwrap();
     let mut floor = 0;
