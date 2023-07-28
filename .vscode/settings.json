@@ -1,5 +1,6 @@
 {
   "rust-analyzer.linkedProjects": [
+    ".\\learn_x_in_y_minutes\\Cargo.toml",
     ".\\y2015\\d01\\Cargo.toml",
     ".\\y2015\\d02\\Cargo.toml",
     ".\\y2015\\d03\\Cargo.toml",

@@ -1,6 +1,6 @@
 // =====================================================================
-// Advent of Code 2015 - Day 02 - Perfectly Spherical Houses in a Vacuum
-// http://adventofcode.com/day/3
+// Advent of Code 2015 - Day 02 - I Was Told There Would Be No Math 
+// http://adventofcode.com/day/2
 // Author: Nathan Roark
 // =====================================================================
 

@@ -1,6 +1,6 @@
 // =====================================================================
-// Advent of Code 2015 - Day 01 - Perfectly Spherical Houses in a Vacuum
-// http://adventofcode.com/day/3
+// Advent of Code 2015 - Day 01 - Not Quite Lisp 
+// http://adventofcode.com/day/1
 // Author: Nathan Roark
 // =====================================================================
 
