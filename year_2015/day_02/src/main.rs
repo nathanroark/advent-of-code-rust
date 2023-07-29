@@ -1,11 +1,10 @@
 // =====================================================================
-// Advent of Code 2015 - Day 02 - I Was Told There Would Be No Math 
+// Advent of Code 2015 - Day 02 - I Was Told There Would Be No Math
 // http://adventofcode.com/day/2
 // Author: Nathan Roark
 // =====================================================================
 
-fn part_1() {
-    let input = std::fs::read_to_string("./input.txt").unwrap();
+fn part_1(input: &str) -> u32 {
     let mut total = 0;
     for line in input.lines() {
         let mut dims: Vec<u32> = line.split('x').map(|x| x.parse().unwrap()).collect();
@@ -15,11 +14,10 @@ fn part_1() {
         let h = dims[2];
         total += 2 * l * w + 2 * w * h + 2 * h * l + l * w;
     }
-    println!("Part_1 Solution: {}", total);
+    return total;
 }
 
-fn part_2() {
-    let input = std::fs::read_to_string("./input.txt").unwrap();
+fn part_2(input: &str) -> u32 {
     let mut total = 0;
     for line in input.lines() {
         let mut dims: Vec<u32> = line.split('x').map(|x| x.parse().unwrap()).collect();
@@ -29,10 +27,11 @@ fn part_2() {
         let h = dims[2];
         total += 2 * l + 2 * w + l * w * h;
     }
-    println!("Part_2 Solution: {}", total);
+    return total;
 }
 
 fn main() {
-    part_1();
-    part_2();
+    let input = std::fs::read_to_string("./input.txt").unwrap();
+    println!("Part 1 Solution: {}", part_1(&input)); // 74
+    println!("Part 2 Solution: {}", part_2(&input)); // 74
 }

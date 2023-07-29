@@ -4,8 +4,7 @@
 // Author: Nathan Roark
 // =====================================================================
 
-fn part_1() {
-    let input = std::fs::read_to_string("./input.txt").unwrap();
+fn part_1(input: &str) -> usize {
     let mut houses = std::collections::HashSet::new();
     let mut x = 0;
     let mut y = 0;
@@ -29,11 +28,10 @@ fn part_1() {
         }
         _ => (),
     });
-    println!("Part_1 Solution: {}", houses.len());
+    return houses.len();
 }
 
-fn part_2() {
-    let input = std::fs::read_to_string("./input.txt").unwrap();
+fn part_2(input: &str) -> usize {
     let mut houses = std::collections::HashSet::new();
     let mut santa_x = 0;
     let mut santa_y = 0;
@@ -79,10 +77,11 @@ fn part_2() {
         }
         _ => (),
     });
-    println!("Part_2 Solution: {}", houses.len());
+    return houses.len();
 }
 
 fn main() {
-    part_1();
-    part_2();
+    let input = std::fs::read_to_string("input.txt").unwrap();
+    println!("Part 1 Solution: {}", part_1(&input)); // 2081
+    println!("Part 2 Solution: {}", part_2(&input)); // 2341
 }

@@ -1,23 +1,22 @@
 // =====================================================================
-// Advent of Code 2015 - Day 01 - Not Quite Lisp 
+// Advent of Code 2015 - Day 01 - Not Quite Lisp
 // http://adventofcode.com/day/1
 // Author: Nathan Roark
 // =====================================================================
 
-fn part_1() {
-    let input = std::fs::read_to_string("./input.txt").unwrap();
+fn part_1(input: &str) -> i32 {
     let mut floor = 0;
     input.chars().for_each(|c| match c {
         '(' => floor += 1,
         ')' => floor -= 1,
         _ => (),
     });
-    println!("Part_1 Solution: {}", floor);
-} // 74
+    return floor;
+}
 
-fn part_2() {
-    let input = std::fs::read_to_string("./input.txt").unwrap();
+fn part_2(input: &str) -> usize {
     let mut floor = 0;
+    let mut answer = 0;
     for (i, c) in input.chars().enumerate() {
         match c {
             '(' => floor += 1,
@@ -25,13 +24,15 @@ fn part_2() {
             _ => (),
         }
         if floor == -1 {
-            println!("Part_2 Solution: {}", i + 1);
+            answer = i + 1;
             break;
         }
     }
-} // 1795
+    return answer;
+}
 
 fn main() {
-    part_1();
-    part_2();
+    let input = std::fs::read_to_string("./input.txt").unwrap();
+    println!("Part 1 Solution: {}", part_1(&input)); // 74
+    println!("Part 2 Solution: {}", part_2(&input)); // 1795
 }
